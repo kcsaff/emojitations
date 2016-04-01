@@ -24,7 +24,11 @@ Emoji are available under their names at `emoji.whatever`.  These objects includ
 use the `emoji` attribute or `str()` to get their emoji strings.  To get all emoji in an annotation, use
 `emoji.annotation.whatever`.  This returns frozen sets which then can be combined using set operations.
 
-The library also provides (preliminary) support for foreign languages, available as `emoji.de.kreditkarte` for example.
+To get info on a particular emoji, you can request `emoji['🍔’]` or `emoji.get(’🍔’)` and look at its `name` and `annotations`.
+
+(Should Python ever support emoji identifiers, `emoji.😜` would also work. Unfortunately we do not yet live in that beautiful world.)
+
+The library also provides (preliminary) support for foreign languages, available as `emoji.de.kreditkarte` for example.  Names & annotations are drawn from the Unicode LDML, and differ for different languages, so `emoji.en[‘🎲’] != emoji.de[‘🎲’]`.
 
 See the examples below for details.
 
