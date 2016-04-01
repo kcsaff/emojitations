@@ -1,20 +1,24 @@
-# emojitations
+Emojitations
+============
 
 A library for using Unicode emoji annotations.  Emoji annotations can provide your scripts with a simple way to
 interpret emoji, or select a random one satisfying certain criteria.  Annotations can be seen listed here on
 the Unicode website: http://unicode.org/emoji/charts/full-emoji-list.html
 
-## Requirements
+Requirements
+------------
 
 1. Python 3.+
 
 This library is pure python 3 and has no other requirements.
 
-## Installation
+Installation
+------------
 
 `python3 setup.py install`
 
-## Usage
+Usage
+-----
 
 Emoji are available under their names at `emoji.whatever`.  These objects include an `annotations` set and you can
 use the `emoji` attribute or `str()` to get their emoji strings.  To get all emoji in an annotation, use
@@ -25,6 +29,7 @@ The library also provides (preliminary) support for foreign languages, available
 See the examples below for details.
 
 ```python
+
 >>> from emojitations import emoji
 >>> emoji.grinning_face.annotations
 frozenset({'grin', 'face'})
@@ -34,4 +39,5 @@ frozenset({'grin', 'face'})
 😸
 >>> print(str(emoji.de.kreditkarte))
 💳
+
 ```
